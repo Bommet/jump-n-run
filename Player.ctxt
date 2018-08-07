@@ -1,0 +1,21 @@
+#BlueJ class context
+comment0.target=Player
+comment1.params=pX\ pY
+comment1.target=Player(int,\ int)
+comment2.params=xBewegung
+comment2.target=void\ springen(int)
+comment3.params=
+comment3.target=void\ laufeRechts()
+comment4.params=
+comment4.target=void\ laufeLinks()
+comment5.params=
+comment5.target=void\ positionSpeichern()
+comment6.params=
+comment6.target=void\ gravitation()
+comment7.params=
+comment7.target=int\ gibXTempo()
+comment8.params=
+comment8.target=double\ gibGravitation()
+comment9.params=
+comment9.target=void\ setzeGravitation()
+numComments=10

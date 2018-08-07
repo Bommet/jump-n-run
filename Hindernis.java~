@@ -1,0 +1,59 @@
+import sas.*;
+import java.awt.Color;
+public class Hindernis extends Rectangle
+{
+    private Rectangle block;
+    private boolean kollisionR = false;
+    private boolean kollisionL = false;
+    private boolean kollisionY = false;
+    private int x,y,breite,hoehe;
+
+    public Hindernis(int pX, int pY, int pBreite, int pHoehe, Color pFarbe)
+    {
+        super(pX, pY, pBreite,pHoehe, pFarbe);
+        x = pX;
+        y = pY;
+        breite = pBreite/2;
+        hoehe = pHoehe/2;
+    }
+
+    //Kollisionsabfragen
+    public boolean gibKollision(Sprite pSpieler)
+    {
+        if(this.intersects(pSpieler)) return true;
+        return false;
+    }
+    
+    public boolean gibKollisionU(Sprite pSpieler)
+    {
+        if(this.intersects(pSpieler+1)) return true;
+        return false;
+    }
+
+//     public boolean kollisionR(Sprite pSpieler)
+//     {
+//         if(pSpieler.getCenterX()+pSpieler.getShapeWidth() == x-breite && pSpieler.getCenterY()-pSpieler.getShapeHeight() < y+hoehe)
+//         {
+//             return true;
+//         }
+//         return false;
+//     }
+//     
+//     public boolean kollisionU(Sprite pSpieler)
+//     {
+//         if(pSpieler.getCenterY()+pSpieler.getShapeHeight() == y-hoehe && pSpieler.getCenterX()+pSpieler.getShapeWidth() > x-breite && pSpieler.getCenterX()-pSpieler.getShapeWidth() < x+breite)
+//         {
+//             return true;
+//         }
+//         return false;
+//     }
+//     
+//     public boolean kollisionL(Sprite pSpieler)
+//     {
+//         if(pSpieler.getCenterX()-pSpieler.getShapeWidth() == x+breite && pSpieler.getCenterY()-pSpieler.getShapeWidth() < y+hoehe)
+//         {
+//             return true;
+//         }
+//         return false;
+//     }
+}

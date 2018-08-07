@@ -1,0 +1,72 @@
+import sas.*;
+import java.awt.Color;
+public class Player extends Sprite
+{
+  private int xTempo, x,y;
+  private double gravitation = 0.1;
+  private boolean laufenRechts,laufenLinks;
+  private Picture body1,body2,body3,body4,body5;
+
+  public Player(int pX, int pY)
+  {  
+    super();
+    x = pX;
+    y = pY;
+    xTempo = 4;
+    laufenRechts = false;
+    laufenLinks = false;
+    body1 = new Picture(x, y, "black-Mario.png");
+    // body2 = new Picture(x, y, "black-Mario-laufen-rechts1.png");
+    // body3 = new Picture(x, y, "black-Mario-laufen-rechts2.png");
+    this.add(body1);
+  }
+
+  //Bewegung
+  public void springen(int xBewegung)
+  {
+    for(int j=0; j<7; j++)
+    {
+      this.move(xBewegung,-10);
+
+    }
+  }
+
+  public void laufeRechts()
+  {
+    this.move(this.gibXTempo(),0);
+    this.positionSpeichern();
+  }
+
+  public void laufeLinks()
+  {
+    this.move(-(this.gibXTempo()),0);
+  }
+
+  public void positionSpeichern()
+  {
+    x = (int)this.getShapeX();
+    y = (int)this.getShapeY();
+  }
+
+  public void gravitation()
+  {
+    this.move(0,gravitation);
+    gravitation += 0.1;   
+  }
+
+  //Getter und Setter
+  public int gibXTempo()
+  {
+    return xTempo;
+  }
+
+  public int gibGravitation()
+  {
+    return gravitation;
+  }
+
+  public void setzeGravitation()
+  {
+    gravitation = 0.1;
+  }
+} // Ende der Klasse Player

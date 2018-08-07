@@ -1,0 +1,5 @@
+#BlueJ class context
+comment0.target=Boden
+comment1.params=pX\ pY\ pHoehe
+comment1.target=Boden(int,\ int,\ int)
+numComments=2
