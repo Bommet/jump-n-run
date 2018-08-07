@@ -17,6 +17,7 @@ public class Spielwelt
 
   public Spielwelt()
   {
+    //Test
     view = new View(bBreite,bHoehe, "Ultra Mario");
     view.setBackgroundColor(Color.CYAN);
 
